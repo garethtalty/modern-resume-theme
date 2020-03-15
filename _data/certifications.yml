@@ -1,0 +1,8 @@
+# certification template
+- columns: 4
+  name: Certification Name
+  icon: award # (optional)
+  link: Link to certification (eg. sproogen.github.io/modern-resume-theme)
+  image_url: images/certifications/1.jpg # (eg. images/certifications/1.jpg)
+  description: | # this will include new lines to allow paragraphs
+    Description about the certification 

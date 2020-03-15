@@ -1,0 +1,27 @@
+<div class="container certifications-container">
+  <h3>{{ site.certifications_title | default: "Certifications" }}</h3>
+  <div class="row layout">
+  {% for certification in site.data.certifications %}
+    <div class="col-xs-{{certification.columns}} col-print-{{certification.columns}} details">
+    {%- if certification.name -%}
+      <h4>
+        {%- if certification.icon -%}
+        <i class="fas fa-{{certification.icon}}"></i>&nbsp;
+        {%- endif -%}
+        {{ certification.name }}
+      </h4>
+      {% include a.html href=certification.link class="link"%}{{ certification.link | escape }}</a>
+      {%- if certification.image_url -%}
+      <div class="certification">
+        {% include a.html href=certification.link class="link"%}
+          <img src="{{ certification.image_url }}" alt="{{certification.name}}" /></a>
+      </div>
+      {%- endif -%}
+      {%- if certification.description -%}
+        <p>{{ certification.description | strip | markdownify }}</p>
+      {%- endif -%}
+    {%- endif -%}
+    </div>
+  {% endfor %}
+  </div>
+</div>

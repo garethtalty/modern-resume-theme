@@ -28,6 +28,10 @@
         {%- include education.html -%}
       {%- endif -%}
 
+      {%- if site.data.certifications.size > 0 -%}
+      {%- include certifications.html -%}
+      {%- endif -%}
+
       {%- if site.more_content -%}
         {%- include more.html -%}
       {%- endif -%}
